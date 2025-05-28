@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  
+html, body{
+  scroll-behavior: smooth;
+}
+
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0;
+  }

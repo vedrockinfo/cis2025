@@ -1,0 +1,34 @@
+@mixin HeroHeading {
+  text-transform: uppercase;
+  font-size: 5.8rem;
+  font-weight: 700;
+  color: $colorWhite;
+  line-height: 1.26;
+  text-shadow: 3px 3px 20px #00000066, -2px 1px 30px #00000066;
+  @media screen and (min-width:1399.9px) {
+    font-size: 6.7rem;
+  }
+
+  @media screen and (min-width:992.1px) and (max-width:1199.9px) {
+    font-size: 4.8rem;
+  }
+
+  @include respond(maxWidth992) {
+    font-size: 3.6rem;
+  }
+
+  @include respond(maxWidth768) {
+    font-size: 3.6rem;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond(maxWidth575) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width:300px) {
+    font-size: 2.6rem;
+  }
+}

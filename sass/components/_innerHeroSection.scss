@@ -1,0 +1,81 @@
+.inner-hero-section {
+    position: relative;
+    min-height: 54rem;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond (maxWidth992) {
+        min-height: 50rem;
+    }
+
+    @include respond (maxWidth575) {
+        min-height: 25rem;
+    }
+
+    @include respond (maxWidth992) {
+        align-items: center;
+        justify-content: center;
+        background-position: 100% 36%;
+    }
+
+    &.parental {
+        @include respond (minWidth992) {
+            align-items: flex-end;
+            justify-content: flex-start;
+            background-position: 100% 50%;
+        }
+    }
+
+    &.news {
+        @include respond (minWidth992) {
+            align-items: flex-end;
+            justify-content: flex-start;
+            background-position: 100% 50%;
+        }
+    }
+
+    &.result {
+        @include respond (minWidth992) {
+            align-items: flex-end;
+            justify-content: flex-start;
+            background-position: 100% 24%;
+        }
+    }
+
+    &.fee {
+        @include respond (minWidth992) {
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-position: 100% 57%;
+        }
+    }
+
+    &.prospectus {
+        @include respond (minWidth992) {
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-position: 100% 52%;
+        }
+    }
+
+    &.campus {
+        align-items: flex-end;
+        background-position: 100% 75%;
+        justify-content: center;
+        filter: brightness(1.4) contrast(1.01);
+    }
+
+    .container{
+        position: relative;
+    }
+    .hero-primary-heading{
+        @include HeroHeading();
+    }
+}
+
+.hdwrapper {
+    background: $colorGray;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}

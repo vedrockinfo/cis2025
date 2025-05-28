@@ -1,0 +1,45 @@
+.hero-section {
+    position: relative;
+
+    .confidence-content {
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+        h1{
+            @include HeroHeading();
+        }
+    }
+
+    @include respond (minWidth992) {
+        display: flex;
+        background: $colorPrimary;
+
+        .hero-slider {
+            flex: 0 0 calc(100% - 330px);
+            max-width: calc(100% - 330px);
+        }
+
+        .hero-form-area {
+            flex: 0 0 330px;
+            max-width: 330px;
+        }
+
+        .confidence-wrapper {
+            height: 57rem;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: bottom;
+            }
+
+            .confidence-content {
+                @include respond (minWidth1200) {
+                    max-width: 100rem;
+                }
+            }
+        }
+    }
+}
