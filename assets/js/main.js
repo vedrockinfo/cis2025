@@ -48,6 +48,7 @@ $('.heroSlider').owlCarousel({
     nav:true,
     mouseDrag:true,
     autoplay:true,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     animateOut: 'slideOutUp',
     responsive:{
         0:{
@@ -68,7 +69,7 @@ $('.instaPost').owlCarousel({
     margin:0,
     dots:false,
     nav:true,
-    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     mouseDrag:false,
     autoplay:true,
     responsive:{
@@ -90,7 +91,7 @@ $('.fbPostSlider').owlCarousel({
     margin:0,
     dots:false,
     nav:true,
-    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     mouseDrag:false,
     autoplay:true,
     responsive:{
@@ -111,7 +112,7 @@ $('.management').owlCarousel({
     margin:20,
     dots:false,
     nav:true,
-    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     mouseDrag:false,
     autoplay:true,
     responsive:{
@@ -131,7 +132,7 @@ $('.pTestimonies').owlCarousel({
     margin:20,
     dots:true,
     nav:true,
-    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     mouseDrag:true,
     autoplay:true,
     responsive:{

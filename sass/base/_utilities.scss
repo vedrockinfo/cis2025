@@ -188,3 +188,18 @@
             transform: scale(0.844, 0.8);
         }
     }
+
+    .owl-carousel.owl-theme .owl-nav{
+      text-align: right;
+      .owl-prev, .owl-next{
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 2px solid;
+        border-color: $colorPrimary;
+        background: transparent;
+        border-radius: 100%;
+        i{
+         color: $colorPrimary; 
+        }
+      }
+    }

@@ -313,26 +313,14 @@
       padding: 1.5rem;
     }
   }
-  .owl-nav{
-    text-align: right;
-    button{
-      background: var(--lineclr)!important;
-      width: 3rem;
-      height: 3rem;
-    }
-  }
   .col-md-6{
-    &:first-child{
-      .owl-nav{
-    button{
-      color: $colorWhite!important;
-    }
-  }
-    }
     &:last-child{
       .owl-nav{
-    button{
-      color: $colorPrimary!important;
+        .owl-prev, .owl-next{
+          border-color: $colorWhite!important;
+        }
+    button i{
+      color: $colorWhite!important;
     }
   }
     }
