@@ -1,0 +1,27 @@
+.years-section{
+    .row{
+        row-gap:1.5rem;
+    }
+    .camb-content{
+        box-shadow: $boxShadowThree;
+        border-radius: 1.6rem;
+        padding-bottom: 3rem;
+        .camb-img{
+            aspect-ratio: 16 / 9;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 1.6rem;
+            }
+        }
+        .camp-content{
+            margin-top: 2rem;
+            text-align: center;
+            .global-btn-two{
+                @include buttonLInk();
+            }
+        }
+    }
+}
