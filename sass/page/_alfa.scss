@@ -1,0 +1,250 @@
+.revolution-tabs-wrapper {
+    .nav-item {
+        width: 33.33%;
+
+        &:not(:last-child) {
+            button {
+                border-right: 1px solid $colorWhite;
+            }
+        }
+
+        button {
+            width: 100%;
+            background: $colorPrimary;
+            color: $colorWhite;
+            color: $colorWhite;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 0;
+            line-height: 1.2;
+            padding: 2rem;
+            text-transform: uppercase;
+            border: 0 0 0 1px;
+            position: relative;
+
+
+
+            &.active {
+                background: lighten($colorPrimary, $amount: 10);
+                color: $colorWhite;
+
+                &::before {
+                    content: "";
+                    background: lighten($colorPrimary, $amount: 10);
+                    position: absolute;
+                    bottom: -1rem;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(45deg) scale(0.9);
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            span {
+                display: block;
+                font-weight: normal;
+                font-size: $defaultFontSize;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+.alfaBooksPage {
+    .tab-content {
+        padding: 2rem 0 2rem 0;
+    }
+}
+
+.revolutionVideos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    height: 62rem;
+    overflow: auto;
+    padding: 0 1rem 0 0;
+
+    .revolutionVideo {
+        .videoWrapper {
+            display: block;
+            position: relative;
+
+            &:hover {
+                .name {
+                    color: $colorWhite;
+                    background: $colorPrimary;
+                }
+            }
+
+            img {
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+            }
+
+            .years {
+                width: 5rem;
+                height: 5rem;
+                aspect-ratio: 1 / 1;
+                text-align: center;
+                color: $colorWhite;
+                background: $colorPrimary;
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 1;
+                display: grid;
+                place-content: center;
+                text-transform: capitalize;
+                font-size: 14px;
+
+                strong {
+                    display: block;
+                    line-height: 1;
+                    font-size: 2rem;
+                }
+            }
+
+            .name {
+                display: block;
+                padding: 1rem;
+                color: $colorPrimary;
+                background: $colorWhite;
+                border: 2px solid $colorPrimary;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                transition: $transition;
+            }
+        }
+    }
+}
+
+.revolutionmagazines {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+
+    .revolutionmagCover {
+        a {
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+                figcaption {
+                    color: $colorWhite;
+                    background: $colorPrimary;
+                }
+            }
+
+            figure {
+                img {}
+
+                figcaption {
+                    text-align: center;
+                    background: $colorWhite;
+                    border: 2px solid $colorPrimary;
+                    color: $colorPrimary;
+                    padding: 1rem;
+                    text-transform: capitalize;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+}
+
+.eyewiteness {
+    .electronic-video-one {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 5rem;
+    }
+
+    .electronic-video-two {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+.audio-section {
+    background: $colorPrimary;
+    margin-top: 7rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url(../img/subscribe-bg.png);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-size: cover;
+        filter: brightness(10);
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+    }
+
+    .audio-card {
+        .aud-img {
+            margin-bottom: 20px;
+
+            img {
+                border-radius: 30px;
+                border: 4px solid #004500;
+                outline: 2px solid #ffffff;
+            }
+        }
+    }
+}
+
+.print-media {
+    .print-media-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 5rem;
+
+        &__item {
+            .news-paper {
+                background: transparent;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    background-image: url(../images/article-bg-01.jpg);
+                    position: absolute;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    mix-blend-mode: color-burn;
+                }
+
+                img {
+                    @media screen and (min-width:768.1px) {
+                        max-height: 311.64px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+
+                h4 {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

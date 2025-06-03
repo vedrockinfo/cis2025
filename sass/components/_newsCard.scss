@@ -1,0 +1,47 @@
+.newsCard{
+    
+        border-radius: 1.6rem;
+        overflow: hidden;
+    .newsImage{
+        position: relative;
+        overflow: hidden;
+        img{
+            transition: $transition;
+            height: 15rem;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .camp{
+            position: absolute;
+            right: 1rem;
+            bottom: -2rem;
+            background: $colorPrimary;
+            color: $colorWhite;
+            text-transform: uppercase;
+        }
+    }
+    .newsContent{
+        position: relative;
+        height: 15rem;
+        background: $colorBg;
+        padding: 1.5rem 1rem;
+        p{
+            font-weight: 700;
+        }
+        a{
+            @include BtnOne();
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 0;
+            text-align: center;
+            &:hover{
+                background: darken($colorPrimary, $amount: 5);
+                color: $colorWhite;
+                border-color: $colorPrimary;
+            }
+        }
+    }
+}

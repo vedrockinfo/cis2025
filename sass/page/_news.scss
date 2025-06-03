@@ -1,0 +1,48 @@
+.print-digital-media{
+    .media-items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .campusSorting{
+        .form-select{
+            border: 1px solid $colorGray;
+            padding: 1rem;
+            font-size: 1.6rem;
+            &:focus,
+            &:active{
+                box-shadow: none;
+                border: 1px solid $colorText;
+            }
+        }
+    }
+    .tab-content{
+        padding: 3rem 1.5rem;
+    }
+    .nav-tabs{
+        .nav-item{
+            width: 50%;
+            button{
+                width: 100%;
+                border: none;
+                color: $colorWhite;
+                background: $colorPrimary;
+                border-radius: 0;
+                &.active{
+                    background: lighten($colorPrimary, $amount: 10);
+                    position: relative;
+                    &::before{
+                        content: "";
+                        background: lighten($colorPrimary, $amount: 10);
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(45deg) scale(0.6);
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

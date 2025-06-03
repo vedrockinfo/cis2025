@@ -1,0 +1,59 @@
+.socialIntiativesSection{
+  .col-md-3{
+    height: 100%;
+  }
+    .year-tabs-wrapper {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 3px;
+      border: none;
+      .nav-link{
+        width: 100%;
+        text-align: center;
+        color: $colorWhite;
+        text-transform: uppercase;
+        background: $colorPrimary;
+        border-radius: 24% 22% 10% 41% / 10% 10% 29% 10%;
+        border: 1px solid $colorPrimary;
+        transition: all 0.4s;
+        &.active{
+          background: $colorWhite;
+          color: $colorPrimary;
+          font-weight: 700;
+        }
+      }
+    }
+    .tab-content{
+      border: 1px solid $colorGray;
+      padding: 3rem;
+    }
+    .socialNewsGrid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      .socialNewsGridItem{
+        border-radius: 1.6rem;
+        overflow: hidden;
+        box-shadow: $boxShadow;
+        .imgWrapper{
+          height: 20rem;
+          img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .newsCaption{
+          padding: 2rem;
+          .globalBtn{
+            margin-top: 4rem;
+            @include BtnTwo();
+            border-color: $colorPrimary;
+            &:hover{
+              background: $colorPrimary;
+            }
+          }
+        }
+      }
+    }
+}

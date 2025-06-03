@@ -1,0 +1,190 @@
+.heroSection {
+    .owl-dots {
+        .owl-dot {
+            width: 30px;
+            height: 4px;
+            background: $colorGray;
+            margin: 5px;
+            border-radius: 2px;
+            display: inline-block;
+            transition: background 0.3s;
+
+            span{
+                display: none;
+            }
+
+            &.active {
+                background: $colorBlack;
+            }
+
+            &:hover {
+                background: $colorText;
+            }
+        }
+    }
+}
+
+.m-bottom {
+  margin-bottom: 7rem;
+
+  @include respond(maxWidth992) {
+    margin-bottom: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 3rem;
+  }
+}
+
+.m-top {
+  margin-top: 7rem;
+
+  @include respond(maxWidth992) {
+    margin-top: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    margin-top: 3rem;
+  }
+}
+
+.p-bottom {
+  padding-bottom: 7rem;
+
+  @include respond(maxWidth992) {
+    padding-bottom: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    padding-bottom: 3rem;
+  }
+}
+
+.p-top {
+  padding-top: 7rem;
+
+  @include respond(maxWidth992) {
+    padding-top: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    padding-top: 3rem;
+  }
+}
+
+.space-one {
+  height: 4rem;
+
+  @include respond(maxWidth992) {
+    height: 3rem;
+  }
+
+  @include respond(maxWidth768) {
+    height: 2.5rem;
+  }
+}
+
+.space-two {
+  height: 7rem;
+
+  @include respond(maxWidth992) {
+    height: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    height: 3rem;
+  }
+}
+
+.space-three {
+  height: 2.5rem;
+
+  @include respond(maxWidth992) {
+    height: 2rem;
+  }
+
+  @include respond(maxWidth768) {
+    height: 1.5rem;
+  }
+}
+
+.primaryList {
+    li {
+    position: relative;
+      padding-left: 15px;
+    &:not(:last-child){
+      padding-bottom: 1rem;
+    }
+    &:before {
+      content: "\f0a4";
+      color: $colorBlack;
+      position: absolute;
+      top: 5px;
+      left: -10px;
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+  }
+}
+
+.footerList {
+    li {
+    position: relative;
+      padding-left: 0;
+     a{
+      border-bottom: 1px solid rgba($colorText, $alpha: 0.5);
+      padding: 1rem;
+      }
+      &:last-child a{
+        border-bottom: none;
+      }
+    &:before {
+      content: "\f0a4";
+      color: $colorText;
+      position: absolute;
+      top: 40%;
+      left: -20px;
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+  }
+}
+.alfasF{
+  text-transform: lowercase;
+  font-family: $fontTertiary;
+  font-style: oblique;
+  font-size: 7rem;
+}
+
+ .zoomIn {
+        position: relative;
+        height: 100%;
+
+        &::before,
+        &::after {
+            content: "";
+            background-image: url(../../images/icon/sharp-bg.png);
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+            transform: scale(0.9);
+            mix-blend-mode: multiply;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(0.844, 0.8);
+        }
+    }

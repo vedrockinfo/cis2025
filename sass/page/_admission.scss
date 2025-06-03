@@ -1,0 +1,12 @@
+.admissionArea{
+    .linkWrapper{
+        text-align: center;
+        margin-top: 3rem;
+        a{
+            @include BtnOne();
+            &:hover{
+                border-color: $colorPrimary;
+            }
+        }
+    }
+}

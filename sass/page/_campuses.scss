@@ -1,0 +1,15 @@
+.campusArea{
+    .row{
+        row-gap: 1.5rem;
+        &.last{
+            .linkWrapper{
+                display: block;
+            }
+            p{
+                     a{
+                        font-size: $defaultFontSize!important;
+                    }
+                }
+        }
+    }
+}

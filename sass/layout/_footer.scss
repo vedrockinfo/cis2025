@@ -1,0 +1,100 @@
+footer {
+    background: $colorFooterBg;
+
+    h4 {
+        color: $colorBlack;
+        font-weight: bold;
+        font-size: 2rem;
+        display: block;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 4rem;
+
+        &::before {
+            content: "";
+            background: $colorBlack;
+            position: absolute;
+            bottom: -1rem;
+            width: 5rem;
+            height: 4px;
+            border-radius: 5px;
+            left: 0;
+        }
+    }
+
+    .footerList {
+        a {
+            color: $colorText;
+            text-transform: capitalize;
+            display: block;
+            transition: $transition;
+
+            &:hover {
+                background: darken($colorFooterBg, $amount: 3);
+            }
+        }
+    }
+
+    .contact-us {
+        li {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+
+            &:not(:last-child) {
+                padding-bottom: 1rem;
+            }
+        }
+
+        a {
+            color: $colorText;
+
+        }
+
+        i {
+            position: relative;
+            top: 3px;
+            font-size: 2rem;
+            color: $colorText;
+        }
+    }
+
+    .footer-social {
+        margin-top: 1.5rem;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            li {
+                a {
+                    width: 35px;
+                    height: 35px;
+                    background: $colorText;
+                    display: grid;
+                    place-content: center;
+                    border-radius: 100%;
+                    transition: $transition;
+
+                    i {
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomFooter {
+        padding: 2rem 0;
+        background: $colorText;
+
+        p,
+        a {
+            color: $colorWhite;
+            font-size: 1.4rem;
+        }
+    }
+}

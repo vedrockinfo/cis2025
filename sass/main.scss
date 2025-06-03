@@ -1,0 +1,34 @@
+@import "./abstract/variables";
+@import "./abstract/responsive";
+@import "./abstract/mixins";
+@import "./abstract/function";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/animation";
+
+@import "./components/campusCard";
+@import "./components/cards";
+@import "./components/heroSection";
+@import "./components/innerHeroSection";
+@import "./components/managementCard";
+@import "./components/newsCard";
+@import "./components/scrollableTabs";
+@import "./components/initiativesGallery";
+@import "./components/careerForm";
+@import "./components/parentTestimonialsCards";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/sidebar";
+
+@import "./page/home";
+@import "./page/news";
+@import "./page/alfa";
+@import "./page/campuses";
+@import "./page/fees";
+@import "./page/admission";
+@import "./page/career";
+@import "./page/about";
+@import "./page/parentalTestimonies";

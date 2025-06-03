@@ -1,0 +1,68 @@
+.parentTestimonial {
+    .owl-nav {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .owl-prev, .owl-next {
+        left: 0;
+        height: 3rem;
+        width: 3rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+        border: 2px solid;
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.faqs {
+    .accordion-item {
+        margin-bottom: 1.5rem;
+
+        .accordion-button {
+            background: $colorPrimary;
+            color: $colorWhite;
+            font-size: $defaultFontSize;
+            border-radius: .5rem;
+            font-weight: normal;
+            border: 1px solid $colorPrimary;
+            font-weight: 500;
+            padding: 1.5rem 2rem;
+
+            &::after {
+                background-image: url(../../images/icon/plus-icon.png) !important
+            }
+
+            &:not(.collapsed) {
+                &::after {
+                    background-image: url(../../images/icon/minus-icon.png) !important
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            span {
+                background: $colorWhite;
+                color: $colorPrimary;
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .accordion-collapse {
+            p {}
+        }
+    }
+}

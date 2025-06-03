@@ -1,0 +1,153 @@
+.heroSection {
+    .item {
+        height: calc(100vh - 140px);
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cover {
+            padding: 75px 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+
+            .header-content {
+                position: relative;
+                padding: 56px;
+                overflow: hidden;
+
+                .line {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    position: absolute;
+                    border: 9px solid #fff;
+                    -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+                    clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+                }
+
+                .linkWrapper {
+                    display: flex;
+                    gap: 1rem;
+                    @include respond (maxWidth575){
+                        flex-direction: column;
+                    }
+                    .globalBtnOne {
+                        @include BtnOne();
+                        width: 16rem;
+                        text-align: center
+                    }
+
+                    .globalBtnTwo {
+                        @include BtnTwo();
+                        width: 16rem;
+                        text-align: center
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-item.active {
+
+        h1 {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: fadeInDown;
+            animation-delay: 0.3s;
+        }
+
+        .globalBtnOne {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: fadeInLeft;
+            animation-delay: 0.3s;
+        }
+
+        .globalBtnTwo {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: fadeInRight;
+            animation-delay: 0.3s;
+        }
+
+        .line {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-name: fadeInLeft;
+            animation-delay: 0.3s;
+        }
+    }
+
+    .owl-nav {
+        margin: 0;
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 43%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+            background: rgba(0, 0, 0, 0.5) !important;
+            width: 40px;
+            cursor: pointer;
+            height: 40px;
+            display: block;
+            z-index: 1000;
+            border-radius: 0;
+
+            span {
+                font-size: 1.6875rem;
+                color: #fff;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:hover {
+                background: #000 !important;
+            }
+        }
+
+        .owl-prev {
+            left: 15px;
+        }
+
+        .owl-next {
+            right: 15px;
+        }
+    }
+
+    &:hover {
+        .owl-prev {
+            left: 0px;
+            opacity: 1;
+        }
+
+        .owl-next {
+            right: 0px;
+            opacity: 1;
+        }
+    }
+    .owl-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}

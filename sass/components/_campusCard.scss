@@ -1,0 +1,89 @@
+.campusCard{
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: $boxShadowTwo;
+    .imgWrapper{
+        height: 20rem;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    .contentWrapper{
+        padding: 1.5rem;
+        text-align: center;
+        .heading-tertiary{
+            position: relative;
+            &::before{
+                content: "";
+                background: $colorPrimary;
+                position: absolute;
+                bottom: -1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 5rem;
+                display: none;
+            }
+        }
+        h6{
+            text-transform: uppercase;
+            font-size: $defaultFontSize;
+            font-weight: 700;
+            margin-top: 15px;
+            color: $colorFooterBg;
+            display: none;
+        }
+        .standard{
+            color: $colorFooterBg;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.5rem 2rem;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            display: inline-block;
+            margin: 1rem 0;
+            letter-spacing: 0.5px;
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            span{
+                display: block;
+            }
+            a{
+                display: inline-block;
+                color: $colorPrimary;
+                font-weight: 300;
+                font-size: 1.8rem;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    .linkWrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        a{
+            display: block;
+            text-align: center;
+            color: $colorWhite;
+            padding: 1rem;
+            font-size: 14px;
+            text-transform: uppercase;
+            i{
+                margin-right: 2px;
+                font-size: 1.6rem;
+            }
+        }
+        .left{
+            background: lighten($colorPrimary, $amount: 10);
+        }
+        .right{
+            background: $colorPrimary;
+        }
+    }
+}

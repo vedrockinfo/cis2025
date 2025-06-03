@@ -1,0 +1,48 @@
+.sidebar {
+    height: 100%;
+    position: sticky;
+    top: 5rem;
+    .instafeeds, .facebookfeeds{
+        border-radius: 1.6rem;
+        overflow: hidden;
+        border: 1px solid $colorBg;
+        margin-bottom: 2rem;
+        h4{
+            background: $colorPrimary;
+            color: $colorWhite;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 10px;
+            margin-bottom: 2rem;
+        }
+        .postWrapper{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            &:not(:last-child){
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $colorBg;
+            }
+            .postImage{
+                width: 6rem;
+                flex: 0 0 6rem;
+                max-width: 6rem;
+                img{
+                    aspect-ratio: 1 / 1;
+                border-radius: 100%;
+                width: 6rem;
+                height: 6rem;
+                }
+            }
+            .postContent{
+                max-width: calc(100% - 6rem);
+                padding-left: 0.5rem;
+                flex: 0 0 calc(100% - 6rem);
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

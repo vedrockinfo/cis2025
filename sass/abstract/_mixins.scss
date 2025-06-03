@@ -1,0 +1,113 @@
+@mixin HeroHeading {
+  text-transform: uppercase;
+  font-size: 5.8rem;
+  font-weight: 700;
+  color: $colorWhite;
+  line-height: 1.26;
+  text-shadow: 3px 3px 20px #00000066, -2px 1px 30px #00000066;
+
+  @media screen and (min-width:1399.9px) {
+    font-size: 6.7rem;
+  }
+
+  @media screen and (min-width:992.1px) and (max-width:1199.9px) {
+    font-size: 4.8rem;
+  }
+
+  @include respond(maxWidth992) {
+    font-size: 3.6rem;
+  }
+
+  @include respond(maxWidth768) {
+    font-size: 3.6rem;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond(maxWidth575) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width:300px) {
+    font-size: 2.6rem;
+  }
+}
+
+@mixin BtnOne {
+  background: $colorPrimary;
+  color: $colorWhite;
+  padding: 12px 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 $colorSecondary;
+  border: 2px solid $colorPrimary;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &:hover {
+    background: $colorWhite;
+    border-color: $colorWhite;
+    color: $colorPrimary;
+  }
+}
+
+@mixin BtnTwo {
+  background: $colorWhite;
+  color: $colorPrimary;
+  padding: 12px 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 $colorGray;
+  border: 2px solid $colorWhite;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 600;
+  transition: $transition;
+
+  &:hover {
+    background: transparent;
+    border-color: $colorWhite;
+    color: $colorWhite;
+  }
+}
+
+@mixin buttonLInk {
+  display: block;
+  margin-top: 1.5rem;
+  a{
+    text-transform: uppercase;
+    color: $colorPrimary;
+    display: inline-block;
+    position: relative;
+    padding: 6px 10px;
+    border: 1.5px solid $colorPrimary;
+    &::after{
+      content: "";
+      background: $colorPrimary;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10px;
+      opacity: 0;
+      pointer-events: none;
+      width: 40%;
+      height: 1.5px;
+      visibility: hidden;
+      transition: $transition;
+      border: 1px solid $colorPrimary;
+      padding: 0 10px;
+    }
+    &:hover{
+      color: $colorSecondary;
+      border-color: $colorSecondary;
+      &::after{
+        opacity: 1;
+        visibility: visible;
+        background: $colorSecondary;
+        right: -35%;
+      }
+    }
+  }
+}

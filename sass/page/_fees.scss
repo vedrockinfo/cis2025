@@ -1,0 +1,243 @@
+.fees-table {
+    display: block
+}
+
+.fees-table .row:not(:last-child) {
+    margin-bottom: 3rem
+}
+
+.fees-table .fee-table-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr)
+}
+
+.fees-table .fee-table-grid .accordion-item {
+    border: none
+}
+
+.fees-table .fee-table-grid .accordion-item:not(:last-child) {
+    margin-bottom: 1rem
+}
+
+.fees-table .fee-table-grid .accordion-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.fees-table .fee-table-grid button.accordion-button {
+    background: #19649c;
+    padding: 1rem 2rem 1rem 0;
+    -webkit-box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px !important;
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px !important;
+    border-radius: 3.5px;
+    -webkit-transition: all .5s;
+    transition: all .5s
+}
+
+.fees-table .fee-table-grid button.accordion-button:hover {
+    background: #155686
+}
+
+.fees-table .fee-table-grid button.accordion-button:not(.collapsed)::after {
+    background-image: url(../../images/icon/minus-icon.png) !important
+}
+
+.fees-table .fee-table-grid button.accordion-button::after {
+    background-image: url(../../images/icon/plus-icon.png) !important
+}
+
+.fees-table .fee-table-grid button.accordion-button:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none
+}
+
+.fees-table .fee-table-grid button.accordion-button .fee-table-item.grade {
+    background: rgba(0, 0, 0, 0)
+}
+
+.fees-table .fee-table-grid button.accordion-button .fee-table-item.grade h2 {
+    font-size: 2rem !important
+}
+
+@media only screen and (max-width: 992px) {
+    .fees-table .fee-table-grid {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+.fees-table .fee-table-grid:not(:last-child) {
+    margin-bottom: 7rem
+}
+
+.fees-table .fee-table-grid .fee-table-item.heading {
+    text-align: center;
+    background: navy;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 1.4rem 0;
+    font-weight: 600
+}
+
+@media only screen and (max-width: 992px) {
+    .fees-table .fee-table-grid .fee-table-item.heading {
+        grid-column: unset
+    }
+}
+
+.fees-table .fee-table-grid .fee-table-item.grade {
+    background: #19649c;
+    color: #fff
+}
+
+@media only screen and (max-width: 992px) {
+    .fees-table .fee-table-grid .fee-table-item.grade {
+        grid-column: unset
+    }
+}
+
+.fees-table .fee-table-grid .fee-table-item.grade.desktop {
+    display: none
+}
+
+.fees-table .fee-table-grid .fee-table-item.grade h2 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1rem 2rem
+}
+
+@media only screen and (max-width: 768px) {
+    .fees-table .fee-table-grid .fee-table-item.grade h2 {
+        font-size: 3rem;
+        padding: 1rem
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .fees-table .fee-table-grid .fee-table-item.grade h2 {
+        font-size: 2rem
+    }
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure {
+    grid-column: span 2
+}
+
+@media only screen and (max-width: 992px) {
+    .fees-table .fee-table-grid .fee-table-item.structure {
+        grid-column: unset
+    }
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure .installments,
+.fees-table .fee-table-grid .fee-table-item.structure .admission {
+    overflow: auto
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure .installments .india-currency {
+    display: block;
+    text-align: left;
+    margin-left: 50px;
+    position: relative
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure .admission td:nth-child(1),
+.fees-table .fee-table-grid .fee-table-item.structure .admission th:nth-child(1) {
+    width: 75%
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure .admission td:nth-child(2),
+.fees-table .fee-table-grid .fee-table-item.structure .admission th:nth-child(2) {
+    width: 25%
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure .installments td,
+.fees-table .fee-table-grid .fee-table-item.structure .installments th {
+    width: 25%
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure table {
+    width: 100%
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure table .month {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.4rem
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure table thead {
+    background: skyblue
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure table tr {
+    border-bottom: 1px solid
+}
+
+.fees-table .fee-table-grid .fee-table-item.structure table td,
+.fees-table .fee-table-grid .fee-table-item.structure table th {
+    padding: 1.2rem 6px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid
+}
+
+@media only screen and (max-width: 575px) {
+
+    .fees-table .fee-table-grid .fee-table-item.structure table td,
+    .fees-table .fee-table-grid .fee-table-item.structure table th {
+        font-size: 1.4rem
+    }
+}
+
+.fees-table ul.nav {
+    margin-bottom: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 1px solid #fff
+}
+
+.fees-table ul.nav.science button {
+    border-right: none;
+    border-left: 1px solid #fff
+}
+
+.fees-table ul.nav li.nav-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+.fees-table ul.nav li.nav-item button {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    background: $colorPrimary;
+    color: #fff;
+    border-right: 1px solid #fff
+}
+
+.fees-table ul.nav li.nav-item button.active {
+    background: lighten($colorPrimary, $amount: 5);
+    position: relative
+}
+
+.fees-table ul.nav li.nav-item button.active::before {
+    content: "";
+    background: lighten($colorPrimary, $amount: 5);
+    width: 1rem;
+    height: 1rem;
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    bottom: -12.5px
+}

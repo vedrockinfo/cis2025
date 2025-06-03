@@ -1,0 +1,90 @@
+.ourStory {
+    h2 {
+        @include respond (minWidth768) {
+            text-align: left;
+        }
+    }
+
+    .imgWrapper {
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.AboutCis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+
+    .campusPic {
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .aboutCampus {
+        width: 555px;
+        padding-left: 3rem;
+
+        h2 {
+            @include respond (minWidth768) {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.cisrecords {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: $colorBlack;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .col-md-4 {
+        &:nth-child(2) {
+            border-left: 1px solid $colorWhite;
+            border-right: 1px solid $colorWhite;
+        }
+    }
+
+    .unit {
+        h2 {
+            font-weight: 700;
+            color: $colorGray;
+            font-size: 4.8rem;
+
+        }
+    }
+
+    .aboutwhat {
+        h3 {
+            color: $colorWhite;
+        }
+    }
+}

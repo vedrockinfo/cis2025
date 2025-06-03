@@ -1,0 +1,32 @@
+.card{
+    .icon{
+        padding: 0;
+        background: $colorWhite;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 100%;
+        border: 5px solid $colorPrimary;
+        margin: -7.5rem auto 2rem;
+        img{
+            width: 100%;
+            transform: scale(0.6);
+        }
+    }
+    .content{
+        padding: 0 2rem 2rem 2rem;
+        .heading-tertiary{
+            position: relative;
+            margin-bottom: 3rem;
+            &::before{
+                content: "";
+                background: $colorPrimary;
+                height: 2px;
+                width: 10rem;
+                left: 50%;
+                bottom: -1.2rem;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
