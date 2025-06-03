@@ -18,8 +18,20 @@
     .owl-dots {
         position: absolute;
         bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 4rem;
+        button{
+            &.active{
+                span{
+                    background:$colorPrimary!important;
+                    border: 1px solid $colorPrimary;
+                }
+            }
+            span{
+                background: $colorWhite!important;
+                border: 1px solid $colorPrimary;
+                margin: 3.5px!important;
+            }
+        }
     }
 }
 
