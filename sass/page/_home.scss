@@ -157,11 +157,12 @@
 
             h6 {
               text-transform: uppercase;
-              background: rgba($colorBlack, $alpha: 0.7);
+              background: rgba($colorPrimary, $alpha: 0.7);
               padding: 10px;
               color: $colorWhite;
               font-weight: 700;
               display: block;
+              font-size: $defaultFontSize;
               margin-bottom: 0;
               width: 100%;
               border-radius: 0;

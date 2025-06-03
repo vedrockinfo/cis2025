@@ -17,6 +17,27 @@ header {
           }
         }
       }
+
+      .admissionOpen{
+        text-align: center;
+        p{
+          font-weight: 700;
+          font-size: 3rem;
+          color: $colorPrimary;
+          font-family: $fontTertiary;
+          text-transform: uppercase;
+          span{
+            display: inline-block;
+            color: $colorWhite;
+            font-size: 2.4rem;
+            font-family: $fontPrimary;
+            background: $colorSecondary;
+            padding: 5px 10px;
+            line-height: 1;
+            animation: animating 2s linear infinite alternate;
+          }
+        }
+      }
     }
 
     .cis-social {

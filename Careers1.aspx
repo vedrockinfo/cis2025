@@ -12,11 +12,21 @@
       <title>CIS : Careers</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="images/favicon.png" type="image/x-icon">
-      <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="vendor/css/owl.carousel.min.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <!-- StyleSheet CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/jquery-ui.min.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/owl.theme.default.css">
+    <!-- THeme CSS -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <!-- Google CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <style type="text/css">
         #loader {
           display: none;
@@ -99,8 +109,8 @@
           padding: 20px 8px;
           position: relative;
           font-style: italic;
-          border-left: 2px solid;
-          border-right: 2px solid;
+          /* border-left: 2px solid;
+          border-right: 2px solid; */
           border-radius: 30px;
           line-height: 1.2;
           font-weight: normal;
