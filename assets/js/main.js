@@ -148,17 +148,22 @@ $('.pTestimonies').owlCarousel({
     }
 });
 
-// News 
-document.getElementById('campusSort').addEventListener('change', function() {
-  const selectedCampus = this.value;
+// News
+document.addEventListener('DOMContentLoaded', function() {
+  const campusSort = document.getElementById('campusSort');
+  if (campusSort) {
+    campusSort.addEventListener('change', function() {
+      const selectedCampus = this.value;
 
-  document.querySelectorAll('.media-items').forEach(function(container) {
-    container.querySelectorAll('.media-item').forEach(function(item) {
-      if (selectedCampus === 'all' || item.getAttribute('data-campus') === selectedCampus) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
+      document.querySelectorAll('.media-items').forEach(function(container) {
+        container.querySelectorAll('.media-item').forEach(function(item) {
+          if (selectedCampus === 'all' || item.getAttribute('data-campus') === selectedCampus) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
     });
-  });
+  }
 });
