@@ -5,7 +5,7 @@
     @include respond (maxWidth992) {
 
       img {
-        transform: scale(0.8);
+        transform: scale(0.88, 0.89);
       }
 
       &::before,
@@ -52,7 +52,18 @@
 
   .primary-grid {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    @include respond (minWidth1200){
+      grid-template-columns: repeat(4, 250px);
+    }
+    @include respond (maxWidth1200){
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include respond (maxWidth992){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (maxWidth575){
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 20px;
     justify-content: center;
     grid-auto-rows: 250px;
@@ -61,6 +72,9 @@
     .primary-grid-items {
       position: relative;
       transition: $transition;
+      @include respond (maxWidth992){
+        overflow: hidden;
+      }
 
       &:hover {
         transform: scale(1.02);
@@ -107,10 +121,15 @@
       tbody {
         td {
           &:first-child {
-            width: 25rem;
+            @include respond (minWidth768){
+              width: 25rem;
+            }
             color: $colorWhite;
             background: $colorPrimary;
             vertical-align: middle;
+            @include respond (maxWidth768){
+              width: 33.33%;
+            }
           }
 
           &:nth-child(2) {
@@ -118,7 +137,9 @@
           }
 
           &:not(:first-child) {
-            width: calc((100% - 25rem) / 2);
+            @include respond (minWidth768){
+              width: calc((100% - 25rem) / 2);
+            }
           }
         }
       }
@@ -131,6 +152,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    @include respond (maxWidth992){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (maxWidth575){
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .videoGridItem {
       overflow: hidden;
@@ -221,6 +248,9 @@
 
 .alfaBook {
   background-image: linear-gradient(90deg, $colorBg 48%, $colorPrimary 48%);
+  @include respond (maxWidth768){
+    background-image: linear-gradient(180deg, $colorBg 48%, $colorPrimary 48%);
+  }
   .bookCover{
     padding: 0 5rem;
   }
@@ -268,6 +298,13 @@
   background: $colorPrimary;
   position: relative;
 
+  .row{
+    @include respond (maxWidth768){
+      row-gap: 10rem;
+      margin-top: 4rem;
+    }
+  }
+
   &::before {
     content: "";
     background-attachment: fixed;
@@ -290,6 +327,9 @@
 }
 .instaFBsection{
   background-image: linear-gradient(90deg, $colorBg 50%,$colorPrimary 50%);
+  @include respond (maxWidth992){
+    background-image: linear-gradient(180deg, $colorBg 50%,$colorPrimary 50%);
+  }
   .heading-secondary{
     text-transform: uppercase;
     margin-bottom: 5rem;

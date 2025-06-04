@@ -2,6 +2,9 @@
     .item {
         height: calc(100vh - 140px);
         position: relative;
+        @include respond (maxWidth992){
+            height: 30rem;
+        }
 
         img {
             width: 100%;
@@ -13,6 +16,12 @@
             padding: 75px 0;
             position: absolute;
             width: 100%;
+            @include respond (maxWidth992){
+                padding: 10rem 0;
+            }
+            @include respond (maxWidth768){
+                padding: 0;
+            }
             height: 100%;
             top: 0;
             left: 0;
@@ -24,6 +33,9 @@
                 position: relative;
                 padding: 56px;
                 overflow: hidden;
+                @include respond (maxWidth768){
+                    text-align: center;
+                }
 
                 .line {
                     content: "";
@@ -31,6 +43,9 @@
                     width: 100%;
                     height: 100%;
                     left: 0;
+                    @include respond (maxWidth575){
+                        display: none;
+                    }
                     top: 0;
                     position: absolute;
                     border: 9px solid #fff;
@@ -41,8 +56,9 @@
                 .linkWrapper {
                     display: flex;
                     gap: 1rem;
-                    @include respond (maxWidth575){
-                        flex-direction: column;
+                    @include respond (maxWidth768){
+                        justify-content: center;
+                        margin-top: 1.5rem;
                     }
                     .globalBtnOne {
                         @include BtnOne();

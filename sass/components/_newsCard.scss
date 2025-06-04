@@ -26,6 +26,10 @@
         height: 15rem;
         background: $colorBg;
         padding: 1.5rem 1rem;
+        @include respond (maxWidth992){
+            height: auto;
+            text-align: center;
+        }
         p{
             font-weight: 700;
         }
@@ -37,6 +41,9 @@
             width: 100%;
             border-radius: 0;
             text-align: center;
+            @include respond (maxWidth992){
+                position: static;
+            }
             &:hover{
                 background: darken($colorPrimary, $amount: 5);
                 color: $colorWhite;

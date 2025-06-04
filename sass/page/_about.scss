@@ -1,4 +1,9 @@
 .ourStory {
+    .row{
+        @include respond (maxWidth992){
+            flex-direction: column-reverse;
+        }
+    }
     h2 {
         @include respond (minWidth768) {
             text-align: left;
@@ -7,19 +12,38 @@
 
     .imgWrapper {
         height: 100%;
+        @include respond (maxWidth992){
+            width: calc(100% - 15rem);
+            margin: auto;
+        }
 
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            @include respond (maxWidth992){
+                aspect-ratio: 1 / 1;
+            }
         }
     }
 }
 
+
+.AboutCisSection{
+    @include respond (minWidth992){
+        .container{
+            max-width: 100%;
+            padding: 0;
+        }
+    }
 .AboutCis {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-content: center;
+    
+    @include respond (maxWidth992){
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     .campusPic {
         height: 100%;
@@ -32,8 +56,10 @@
     }
 
     .aboutCampus {
-        width: 555px;
+        @include respond (minWidth992){
+            width: 555px;
         padding-left: 3rem;
+        }
 
         h2 {
             @include respond (minWidth768) {
@@ -41,6 +67,7 @@
             }
         }
     }
+}
 }
 
 .cisrecords {
@@ -78,7 +105,13 @@
             font-weight: 700;
             color: $colorGray;
             font-size: 4.8rem;
-
+            @include respond (maxWidth992){
+                font-size: 3.6rem;
+            }
+            @include respond (maxWidth768)
+            {
+                font-size: 2.4rem;
+            }
         }
     }
 

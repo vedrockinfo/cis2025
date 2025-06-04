@@ -1,0 +1,7 @@
+.careersArea{
+    @include respond (maxWidth992){
+        .row{
+            flex-direction: column-reverse;
+        }
+    }
+}

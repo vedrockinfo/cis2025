@@ -46,6 +46,10 @@
   display: inline-block;
   text-transform: uppercase;
   transition: $transition;
+  @include respond (maxWidth768){
+    padding: 5px 15px;
+    width: auto;
+  }
 
   &:hover {
     background: $colorWhite;
@@ -65,7 +69,10 @@
   display: inline-block;
   font-weight: 600;
   transition: $transition;
-
+@include respond (maxWidth768){
+    padding: 5px 15px;
+    width: auto;
+  }
   &:hover {
     background: transparent;
     border-color: $colorWhite;

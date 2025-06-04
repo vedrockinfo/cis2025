@@ -1,6 +1,17 @@
 footer {
     background: $colorFooterBg;
 
+    .content-wrapper{
+         @include respond (maxWidth992){
+            img{
+                width: 15rem;
+            }
+        }
+        @include respond (maxWidth768){
+            text-align: center;
+        }
+    }
+
     h4 {
         color: $colorBlack;
         font-weight: bold;
@@ -68,6 +79,10 @@ footer {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            @include respond (maxWidth768){
+                justify-content: center;
+                margin-bottom: 2rem;
+            }
 
             li {
                 a {
@@ -90,6 +105,28 @@ footer {
     .bottomFooter {
         padding: 2rem 0;
         background: $colorText;
+        .bfGrid{
+            @include respond (minWidth768){
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include respond (maxWidth768){
+                text-align: center;
+            }
+            .right{
+                    a{
+                        &:first-child{
+                            &::after{
+                                content: "|";
+                                margin: 0 0.5rem;
+                            }
+                        }
+                    }
+                }
+        }
 
         p,
         a {

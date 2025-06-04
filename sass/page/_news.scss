@@ -3,6 +3,12 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     .campusSorting{
         .form-select{

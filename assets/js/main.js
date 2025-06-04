@@ -47,7 +47,7 @@ $('.heroSlider').owlCarousel({
     dots:true,
     nav:true,
     mouseDrag:true,
-    autoplay:true,
+    autoplay:false,
     navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
     animateOut: 'slideOutUp',
     responsive:{
