@@ -29,6 +29,10 @@ h6 {
   font-weight: bold;
   text-align: center;
   color: $colorPrimary;
+  span{
+    font:inherit;
+    color: $colorSecondary;
+  }
   @include respond(maxWidth992) {
     margin-bottom: 30px;
     font-size: 36px;

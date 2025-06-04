@@ -92,7 +92,7 @@
     border: 1.5px solid $colorPrimary;
     &::after{
       content: "";
-      background: $colorPrimary;
+      background: $colorSecondary;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -103,7 +103,6 @@
       height: 1.5px;
       visibility: hidden;
       transition: $transition;
-      border: 1px solid $colorPrimary;
       padding: 0 10px;
     }
     &:hover{

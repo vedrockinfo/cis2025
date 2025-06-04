@@ -169,7 +169,7 @@ header {
 
             .nav-link {
               color: $colorPrimary;
-              font-weight: bold;
+              font-weight: 500;
               font-size: 1.4rem;
               @include respond (maxWidth1200){
                 padding: 0.7rem;

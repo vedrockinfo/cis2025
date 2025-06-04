@@ -1,0 +1,26 @@
+.founders{
+    h2, .sub-heading{
+        @include respond (minWidth992){
+            text-align: left;
+        }
+    }
+    .sub-heading{
+        color: $colorWhite;
+        background: $colorSecondary;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 5px 15px;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    .imgWrapper{
+        border-radius: 1.6rem;
+        overflow: hidden;
+        box-shadow: $boxShadowThree;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

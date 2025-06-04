@@ -1,0 +1,61 @@
+.principalCard {
+    position: relative;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: $boxShadow;
+    padding-bottom: 3rem;
+    background: lighten($colorPrimary, $amount: 60);
+    &::before{
+        content: "";
+        background: $colorPrimary;
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 50% 23%, 0 50%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .pPic {
+        margin: 3rem auto;
+        width: 10rem;
+        height: 10rem;
+        aspect-ratio: 1 / 1;
+        display: block;
+        overflow: hidden;
+        border-radius: 100%;
+        border: 3px solid $colorWhite;
+        outline: 3px solid $colorPrimary;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .pName {
+        position: relative;
+        z-index: 1;
+    }
+
+    .pDesig {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        h6{
+            color: $colorText;
+            margin: 15px 0 0 0;
+            padding: 1rem;
+            font-weight: normal;
+            border-top: 1px solid $colorText;
+            border-bottom: 1px solid $colorText;
+            font-size: $defaultFontSize;
+            display: inline-block;
+        }
+    }
+}
