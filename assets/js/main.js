@@ -1,3 +1,16 @@
+// Auto Popup
+  document.addEventListener('DOMContentLoaded', function () {
+    // Check if the popup has been shown before
+    if (!localStorage.getItem('popupShown')) {
+      var autoPopup = new bootstrap.Modal(document.getElementById('autoPopupModal'));
+      autoPopup.show();
+
+      // Set a flag in localStorage so it doesn't show again
+      // localStorage.setItem('popupShown', 'true');
+    }
+  });
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar_top");
   const toggler = document.getElementById("navbarSideCollapse");
@@ -47,9 +60,9 @@ $('.heroSlider').owlCarousel({
     dots:true,
     nav:true,
     mouseDrag:true,
-    autoplay:false,
+    autoplay:true,
     navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
-    animateOut: 'slideOutUp',
+    // animateIn: 'fadeIn',
     responsive:{
         0:{
             items:1

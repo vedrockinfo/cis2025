@@ -10,6 +10,25 @@
                         font-size: $defaultFontSize!important;
                     }
                 }
+                .campusCard{
+                    height: 100%;
+                    .imgWrapper, .linkWrapper{
+                        display: none;
+                    }
+                    .contentWrapper{
+                        padding: 0;
+                        .heading-tertiary{
+                            font-size: $defaultFontSize;
+                            background: $colorPrimary;
+                            color: $colorWhite;
+                            padding: 2rem 1rem;
+                            text-transform: uppercase;
+                        }
+                        p{
+                            padding: 0 1rem 1rem 1rem;
+                        }
+                    }
+                }
         }
     }
 }

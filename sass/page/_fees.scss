@@ -137,10 +137,14 @@
     overflow: auto
 }
 
+.fees-table .fee-table-grid .fee-table-item.structure .installments .upto{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
 .fees-table .fee-table-grid .fee-table-item.structure .installments .india-currency {
-    display: block;
+    display: inline-block;
     text-align: left;
-    margin-left: 50px;
     position: relative
 }
 
@@ -156,7 +160,7 @@
 
 .fees-table .fee-table-grid .fee-table-item.structure .installments td,
 .fees-table .fee-table-grid .fee-table-item.structure .installments th {
-    width: 25%
+    width: 33.33333%
 }
 
 .fees-table .fee-table-grid .fee-table-item.structure table {

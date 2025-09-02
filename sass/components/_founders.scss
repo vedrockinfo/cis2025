@@ -1,10 +1,13 @@
-.founders{
-    h2, .sub-heading{
-        @include respond (minWidth992){
+.founders {
+
+    h2,
+    .sub-heading {
+        @include respond (minWidth992) {
             text-align: left;
         }
     }
-    .sub-heading{
+
+    .sub-heading {
         color: $colorWhite;
         background: $colorSecondary;
         text-transform: uppercase;
@@ -13,14 +16,27 @@
         display: inline-block;
         margin-bottom: 0.5rem;
     }
-    .imgWrapper{
+
+    .imgWrapper {
         border-radius: 1.6rem;
         overflow: hidden;
         box-shadow: $boxShadowThree;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    .principal-row {
+        .left-side {
+            @include respond (minWidth768) {
+                float: left;
+                width: 50%;
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
         }
     }
 }
